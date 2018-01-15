@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Imagine this page was rendered by the backend which allowed for the XSS attempts below</h1>
+
+    <p class="userPost">
+        <script src="https://example.com/index.js">
+        </script>
+    </p>
+    <p class="userPost">
+        <script>
+            alert('pwnd by inline script')
+        </script>
+    </p>
+    <p class="userPost">
+        <img src="a" alt="" onerror="alert('pwnd by more elaborate inline script')">
+    </p>
+    <p class="userPost">
+        <script src="/xsses.js">
+        </script>
+    </p>
+    <p class="userPost"></p>
+    <p class="userPost"></p>
+    <p class="userPost"></p>
+    <p class="userPost"></p>
+    <p class="userPost"></p>
+    <p class="userPost"></p>
+
+</body>
+</html>

