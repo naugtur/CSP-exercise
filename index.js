@@ -11,8 +11,7 @@ app.use((req, res, next) => {
     res.set(
         'Content-Security-Policy',
         removeNewline(`
-            script-src 'self';
-            report-uri /report
+            write it here
         `)
     );
     next()
