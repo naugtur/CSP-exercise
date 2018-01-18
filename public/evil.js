@@ -37,7 +37,7 @@ const senders = [
         const style = document.createElement('style');
 
         style.type = 'text/css';
-        style.styleSheet.cssText = css;
+        style.innerHTML = css;
 
         document.head.appendChild(style);
     },
