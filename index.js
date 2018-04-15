@@ -11,7 +11,7 @@ app.use((req, res, next) => {
     res.set(
         'Content-Security-Policy',
         removeNewline(`
-            write it here
+
         `)
     );
     next()
@@ -22,3 +22,5 @@ app.use('/', express.static('public'));
 
 // Have to choose some port, right
 app.listen(1337);
+
+console.log('Open http://localhost:1337/')
