@@ -1,7 +1,7 @@
 # CSP-exercise
 
 ```
-npm install
+npm ci --ignore-scripts
 npm start
 ```
 Open [http://localhost:1337/](http://localhost:1337/)

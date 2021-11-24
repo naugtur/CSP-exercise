@@ -9,8 +9,8 @@
 <body>
     <h1>Imagine this page was rendered by the backend which allowed for the XSS attempts below</h1>
 
-    <script nonce="Nc3n83cnSAd3wc3Sasdfn939hc3">
-        alert("Make this pop up with your CSP while others don't")
+    <script>
+        alert("Make this alert work with your CSP while others don't")
     </script>
 
     <p class="userPost">
@@ -30,6 +30,8 @@
         </script>
     </p>
     <p class="userPost"></p>
+
+    <h2>For some fun exploration on how to attack: http://www.xssgame.com</h2>
 
 </body>
 </html>

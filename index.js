@@ -11,7 +11,11 @@ app.use((req, res, next) => {
     res.set(
         'Content-Security-Policy',
         removeNewline(`
-
+        script-src 'nonce-Nc3n83cnSAd3wc3Sasdfn939hc3' 'self';
+        default-src 'self';
+        script-src 'self';
+        img-src 'self';
+        style-src 'self';
         `)
     );
     next()

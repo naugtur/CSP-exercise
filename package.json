@@ -1,5 +1,5 @@
 {
-  "name": "CSP-exercise",
+  "name": "csp-exercise",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -20,5 +20,8 @@
   "dependencies": {
     "express": "^4.16.2",
     "newline-remove": "^1.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
