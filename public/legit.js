@@ -1,0 +1,1 @@
+$('div').html('<img src="https://i.imgur.com/kMQZNey.jpeg">')
