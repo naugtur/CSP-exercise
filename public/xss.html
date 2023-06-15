@@ -11,6 +11,9 @@
 
     <script>
         alert("Make this alert work with your CSP while others don't")
+        const s = document.createElement('script');
+        s.textContent = 'alert("Can you make this work too?")';
+        document.body.append(s);
     </script>
 
     <p class="userPost">
